@@ -1,0 +1,57 @@
+
+.home {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.side {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.middle {
+  flex: 2;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.home h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .home {
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    display: inline;
+  }
+  .middle {
+    flex: 2;
+    padding: 20px;
+    border-radius: 4px;
+  }
+}
+
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .home {
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    display: inline;
+  }
+  .middle {
+    flex: 2;
+    padding: 0px;
+    border-radius: 4px;
+  }
+}
