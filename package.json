@@ -2,7 +2,7 @@
   "scripts": {
     "start": "ts-node index.ts",
     "dev": "node --exec ts-node index.ts",
-    "build": "tsc"
+    "build": "ts-node index.ts"
   },
   "devDependencies": {
     "@types/cors": "^2.8.16",
