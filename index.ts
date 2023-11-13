@@ -28,10 +28,16 @@ app.get("*", (req, res) => {
     //our GET route needs to point to the index.html in our build
     console.log("dir name", __dirname);
 
-    res.sendFile(path.resolve("/Users/dilaxn/Projects/Todo-Corali/server", "client", "build", "index.html"));
+    res.sendFile(
+        path.resolve(
+            "/Users/dilaxn/Projects/Todo-Corali/server",
+            "client",
+            "build",
+            "index.html"
+        )
+    );
 });
-
-// Start the Express server
-app.listen(PORT, () => {
+app.set("port", PORT);
+app.listen(app.get("port"), () => {
     console.log(`Server is running on port :${PORT}`);
 });
