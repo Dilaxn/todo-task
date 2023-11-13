@@ -2,6 +2,7 @@
 import express, { Application, Request, Response, NextFunction } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import "abort-controller/polyfill";
 import connectToDatabase from "./infrastructure/database/mongoose/mongoose.config";
 import router from "./presentation/api/routers/router";
 var path = require("path");
