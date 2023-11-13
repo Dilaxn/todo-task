@@ -25,7 +25,7 @@ connectToDatabase();
 app.use("/api/v1", router);
 
 app.get("test", (req, res) => {
-    res.send("Hello World!");
+    res.send("Hello World!!");
 });
 
 app.get("*", (req, res) => {
