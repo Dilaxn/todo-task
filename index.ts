@@ -29,7 +29,6 @@ app.get("/test", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-    //our GET route needs to point to the index.html in our build
     console.log("dir name", __dirname);
 
     res.sendFile(
