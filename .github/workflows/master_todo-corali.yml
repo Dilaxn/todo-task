@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - Todo-Corali
+name: Build and deploy Node.js app to Azure Web App - todo-corali
 
 on:
   push:
@@ -21,10 +21,10 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm install, start, and test
+      - name: npm install, build, and test
         run: |
           npm install
-          npm run start --if-present
+          npm run build --if-present
           npm run test --if-present
 
       - name: Zip artifact for deployment
@@ -42,7 +42,7 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    
+
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
@@ -51,12 +51,12 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-      
+
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'Todo-Corali'
+          app-name: 'todo-corali'
           slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EBB4EEB2B1B94E6E85C033017CA5D5DF }}
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E71B7B3F43024F5195BB1612346A0B85 }}
