@@ -37,7 +37,7 @@ app.get("*", (req, res) => {
         )
     );
 });
-app.set("port", PORT);
+app.set("port", 6301);
 app.listen(app.get("port"), () => {
     console.log(`Server is running on port :${PORT}`);
 });
