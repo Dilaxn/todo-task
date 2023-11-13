@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "start": "ts-node index.ts",
+    "start": "node dist/index.js",
     "dev": "node --exec ts-node index.ts",
-    "build": "ts-node index.ts"
+    "build": "npx tsc --build --force"
   },
   "devDependencies": {
     "@types/cors": "^2.8.16",

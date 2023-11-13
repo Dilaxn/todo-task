@@ -12,5 +12,6 @@
       "@services/*": ["./application/services/*"]
     }
   },
-  "include": ["src/**/*.ts"]
+  "include": ["*.ts"],
+  "exclude": ["dist"]
 }
