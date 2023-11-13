@@ -59,4 +59,4 @@ jobs:
           app-name: 'Todo-Corali'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B3EFC608637149FBA072268555A1603F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E71B7B3F43024F5195BB1612346A0B85 }}
