@@ -24,7 +24,7 @@ connectToDatabase();
 // API routes
 app.use("/api/v1", router);
 
-app.get("test", (req, res) => {
+app.get("/test", (req, res) => {
     res.send("Hello World!!");
 });
 
