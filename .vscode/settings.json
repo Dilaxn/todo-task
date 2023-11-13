@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/d3598758-0ddd-423c-b804-4368cb8019cd/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/corali-todo",
+    "appService.deploySubpath": "."
+}

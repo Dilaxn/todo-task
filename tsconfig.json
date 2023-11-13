@@ -11,6 +11,5 @@
     "paths": {
       "@services/*": ["./application/services/*"]
     }
-  },
-  "include": [ "types"]
+  }
 }
