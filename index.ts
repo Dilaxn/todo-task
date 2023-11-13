@@ -24,6 +24,10 @@ connectToDatabase();
 // API routes
 app.use("/api/v1", router);
 
+app.get("test", (req, res) => {
+    res.send("Hello World!");
+});
+
 app.get("*", (req, res) => {
     //our GET route needs to point to the index.html in our build
     console.log("dir name", __dirname);
