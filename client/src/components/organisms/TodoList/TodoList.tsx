@@ -99,7 +99,9 @@ const TodoList: React.FC<AddTaskFormProps> = ({ darkTheme }) => {
     <div className={`todo-list ${darkTheme ? "dark-theme" : ""}`}>
       <div className="todo-list-head">
         <Button className="button-no-outline left" onClick={() => handleSubmit}>
-          {/* {todo && todo.filter((task: Task) => task.status === "active").length}{" "} */}
+          {todo && Array.isArray(todo)
+            ? todo.filter((task: Task) => task.status === "active").length
+            : 0}{" "}
           items left
         </Button>
         <div className="button-no-outline middle">
