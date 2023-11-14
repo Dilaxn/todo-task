@@ -12,7 +12,7 @@ dotenv.config();
 
 // Set up Express application
 const app: Application = express();
-const PORT: number = parseInt(process.env.PORT || "5000", 10);
+const PORT: number = parseInt(process.env.PORT || "6301", 10);
 
 // Middleware to parse JSON requests
 app.use(express.json());
@@ -41,7 +41,7 @@ app.get("*", (req, res) => {
         )
     );
 });
-app.set("port", 6301);
+app.set("port", PORT);
 app.listen(app.get("port"), () => {
     console.log(`Server is running on port :${PORT}`);
 });
