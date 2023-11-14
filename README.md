@@ -1,6 +1,6 @@
-# redux-toolkit-todo
+# todo-Corali
 
-[Demo](https://redux-toolkit-todo.onrender.com/)
+[Demo](https://todo-task-4p5f.onrender.com/)
 
 # redux toolkit's role in this project
 
@@ -59,7 +59,7 @@ redux-toolkit-todo is a powerful task management application with a wide range o
 
     Error Handling: Receive instant feedback and error messages to help resolve issues efficiently.
 
-    Local Storage: Store your tasks and settings in local storage for easy retrieval.
+    Local Storage: Store your tasks and settings in mongoDB (atlas cloud) using node/express backend.
 
     Toast Notifications: Toast notifications provide real-time feedback on actions, such as successful task creation or priority changes.
 
@@ -73,27 +73,58 @@ Make sure you installed Git, Node.js in your computer
 
 ```bash
 # Clone the repository
-git clone https://github.com/Dilaxn/redux-toolkit-todo.git
+git clone https://github.com/Dilaxn/todo-task
 
 # Change directory to the project folder
-cd redux-toolkit-todo
+cd todo-task
 
 # Install dependencies
 npm install
 
-# Start the project
-npm start or (npm install -g serve && serve -s build)
+# Build the project
+npm run build
 
-# Test commands
-npm test
+# Navigate to client
+cd client
+
+# Install dependencies
+npm install
+
+# Build the frontend
+npm run build
+
+# back to the project
+cd ..
+
+# Start the project
+npm start
 ```
+
+## Backend <a name="backend"></a>
+
+Application Layer <a name="application-layer"></a>
+
+    application/services/todo.service.ts: Backend service for Todo functionality.
+
+Domain Layer <a name="domain-layer"></a>
+
+    domain/repositories/todo.repository.ts: Repository for interacting with Todo entities.
+
+Infrastructure Layer <a name="infrastructure-layer"></a>
+
+    infrastructure/database/mongoose/mongoose.config.ts: Configuration for Mongoose (MongoDB).
+    infrastructure/express/controllers/todo.controller.ts: Controller handling HTTP requests for Todos.
+    infrastructure/express/exception: Custom exceptions for application and validation errors.
+    infrastructure/express/middleware: Error handling middleware.
 
 ## Usage
 
-![Screenshot](./src/assets/screenshots/Screenshot%202023-11-03%20at%2012.18.05.png)
-![Screenshot](./src/assets/screenshots/Screen%20Shot%202023-11-03%20at%2002.30.37.png)
-![Screenshot](./src/assets/screenshots/Screenshot%202023-11-03%20at%2011.51.45.png)
-![Screenshot](./src/assets/screenshots/Screen%20Shot%202023-11-03%20at%2002.29.48.png)
-![Screenshot](./src/assets/screenshots/Screenshot%202023-11-03%20at%2002.31.16.png)
+![Screenshot](./client/src/assets/screenshots/Screenshot%202023-11-03%20at%2012.18.05.png)
+![Screenshot](./client/src/assets/screenshots/Screen%20Shot%202023-11-03%20at%2002.30.37.png)
+![Screenshot](./client/src/assets/screenshots/Screenshot%202023-11-03%20at%2011.51.45.png)
+![Screenshot](./client/src/assets/screenshots/Screen%20Shot%202023-11-03%20at%2002.29.48.png)
+![Screenshot](./client/src/assets/screenshots/Screenshot%202023-11-03%20at%2002.31.16.png)
+
+![Project Structure](./client/src/assets/FS.png)
 
 Thank you.
