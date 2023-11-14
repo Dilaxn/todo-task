@@ -1,6 +1,8 @@
 # todo-Corali
 
-[Demo](https://todo-task-4p5f.onrender.com/)
+Here I have hosted the app on azure and render
+[Demo-Azure](http://todo-corali.azurewebsites.net/)
+[Demo-Render](https://todo-task-4p5f.onrender.com/)
 
 # redux toolkit's role in this project
 
