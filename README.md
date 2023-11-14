@@ -4,6 +4,10 @@ Here I have hosted the app on azure and render
 [Demo-Azure](http://todo-corali.azurewebsites.net/)
 [Demo-Render](https://todo-task-4p5f.onrender.com/)
 
+## My approach
+
+    Here I used clean architecture for backend with atomic folder structure for front end however It's a simple app so I did't include all the components here. I have added as much as possible. Thank you.
+
 # redux toolkit's role in this project
 
     State Management: Redux Toolkit manages the application's state, including data related to tasks, their statuses, and priorities. This state is stored centrally and can be accessed and updated from various components.
